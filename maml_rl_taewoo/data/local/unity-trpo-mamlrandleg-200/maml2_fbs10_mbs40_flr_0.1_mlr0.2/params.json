@@ -1,0 +1,82 @@
+{
+  "args_data": "gANjcmxsYWIubWlzYy5pbnN0cnVtZW50ClN0dWJNZXRob2RDYWxsCnEAKYFxAX1xAihYBgAAAF9fYXJnc3EDKGNybGxhYi5taXNjLmluc3RydW1lbnQKU3R1Yk9iamVjdApxBCmBcQV9cQYoWAQAAABhcmdzcQcpWAYAAABrd2FyZ3NxCH1xCShYAwAAAGVudnEKaAQpgXELfXEMKGgHKWgIfXENWAsAAAB3cmFwcGVkX2VudnEOaAQpgXEPfXEQKGgHKWgIfXERaApoBCmBcRJ9cRMoaAcpaAh9cRRYCwAAAHByb3h5X2NsYXNzcRVjcmxsYWIuZW52cy5tdWpvY28uYW50X2Vudl9yYW5kbGVnCkFudEVudlJhbmRMZWcKcRZ1YnNoFWNybGxhYi5lbnZzLm5vcm1hbGl6ZWRfZW52Ck5vcm1hbGl6ZWRFbnYKcRd1YnNoFWNzYW5kYm94LnJvY2t5LnRmLmVudnMuYmFzZQpUZkVudgpxGHViWAYAAABwb2xpY3lxGWgEKYFxGn1xGyhoByloCH1xHChYBAAAAG5hbWVxHWgZWAgAAABlbnZfc3BlY3EeY3JsbGFiLm1pc2MuaW5zdHJ1bWVudApTdHViQXR0cgpxHymBcSB9cSEoWAQAAABfb2JqcSJoC1gKAAAAX2F0dHJfbmFtZXEjWAQAAABzcGVjcSR1YlgOAAAAZ3JhZF9zdGVwX3NpemVxJUc/uZmZmZmZmlgTAAAAaGlkZGVuX25vbmxpbmVhcml0eXEmY3RlbnNvcmZsb3cucHl0aG9uLm9wcy5nZW5fbm5fb3BzCnJlbHUKcSdYDAAAAGhpZGRlbl9zaXplc3EoS2RLZIZxKXVoFWNzYW5kYm94LnJvY2t5LnRmLnBvbGljaWVzLm1hbWxfbWluaW1hbF9nYXVzc19tbHBfcG9saWN5Ck1BTUxHYXVzc2lhbk1MUFBvbGljeQpxKnViWAgAAABiYXNlbGluZXEraAQpgXEsfXEtKGgHKWgIfXEuaB5oHymBcS99cTAoaCJoC2gjaCR1YnNoFWNybGxhYi5iYXNlbGluZXMubGluZWFyX2ZlYXR1cmVfYmFzZWxpbmUKTGluZWFyRmVhdHVyZUJhc2VsaW5lCnExdWJYCwAAAGxvYWRfcG9saWN5cTJOWAoAAABiYXRjaF9zaXplcTNLClgPAAAAbWF4X3BhdGhfbGVuZ3RocTRLyFgPAAAAbWV0YV9iYXRjaF9zaXplcTVLKFgQAAAAbnVtX2dyYWRfdXBkYXRlc3E2SwNYBQAAAG5faXRycTdNuAtYCAAAAHVzZV9tYW1scTiIWAkAAABzdGVwX3NpemVxOUc/yZmZmZmZmlgJAAAAb3B0aW1pemVycTpoBCmBcTt9cTwoaAcpaAh9cT1oHWg6c2gVY3NhbmRib3gucm9ja3kudGYub3B0aW1pemVycy5wZW5hbHR5X2xiZmdzX29wdGltaXplcgpQZW5hbHR5TGJmZ3NPcHRpbWl6ZXIKcT51YlgEAAAAcGxvdHE/iXVoFWNzYW5kYm94LnJvY2t5LnRmLmFsZ29zLm1hbWxfdHJwbwpNQU1MVFJQTwpxQHViWAUAAAB0cmFpbnFBKX1xQnRxQ1gIAAAAX19rd2FyZ3NxRH1xRXViLg==",
+  "exp_name": "maml2_fbs10_mbs40_flr_0.1_mlr0.2",
+  "json_args": {
+    "algo": {
+      "_name": "sandbox.rocky.tf.algos.maml_trpo.MAMLTRPO",
+      "batch_size": 10,
+      "load_policy": null,
+      "max_path_length": 200,
+      "meta_batch_size": 40,
+      "n_itr": 3000,
+      "num_grad_updates": 3,
+      "optimizer": {
+        "_name": "sandbox.rocky.tf.optimizers.penalty_lbfgs_optimizer.PenaltyLbfgsOptimizer",
+        "name": "optimizer"
+      },
+      "plot": false,
+      "step_size": 0.2,
+      "use_maml": true
+    },
+    "baseline": {
+      "_name": "rllab.baselines.linear_feature_baseline.LinearFeatureBaseline",
+      "env_spec": {
+        "attr": "spec",
+        "obj": {
+          "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+          "wrapped_env": {
+            "_name": "rllab.envs.normalized_env.NormalizedEnv",
+            "env": {
+              "_name": "rllab.envs.mujoco.ant_env_randleg.AntEnvRandLeg"
+            }
+          }
+        }
+      }
+    },
+    "env": {
+      "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+      "wrapped_env": {
+        "_name": "rllab.envs.normalized_env.NormalizedEnv",
+        "env": {
+          "_name": "rllab.envs.mujoco.ant_env_randleg.AntEnvRandLeg"
+        }
+      }
+    },
+    "policy": {
+      "_name": "sandbox.rocky.tf.policies.maml_minimal_gauss_mlp_policy.MAMLGaussianMLPPolicy",
+      "env_spec": {
+        "attr": "spec",
+        "obj": {
+          "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+          "wrapped_env": {
+            "_name": "rllab.envs.normalized_env.NormalizedEnv",
+            "env": {
+              "_name": "rllab.envs.mujoco.ant_env_randleg.AntEnvRandLeg"
+            }
+          }
+        }
+      },
+      "grad_step_size": 0.1,
+      "hidden_nonlinearity": "tensorflow.python.ops.gen_nn_ops.relu",
+      "hidden_sizes": [
+        100,
+        100
+      ],
+      "name": "policy"
+    }
+  },
+  "log_dir": "D:\\grew_svn\\2020\\GitBlit\\GrewRL\\maml_rl_taewoo/data/local/unity-trpo-mamlrandleg-200/maml2_fbs10_mbs40_flr_0.1_mlr0.2",
+  "log_tabular_only": false,
+  "n_parallel": 1,
+  "params_log_file": "params.json",
+  "plot": false,
+  "resume_from": null,
+  "seed": 1,
+  "snapshot_gap": 10,
+  "snapshot_mode": "gap",
+  "tabular_log_file": "progress.csv",
+  "text_log_file": "debug.log",
+  "use_cloudpickle": false,
+  "variant_data": "gANjcmxsYWIubWlzYy5pbnN0cnVtZW50ClZhcmlhbnREaWN0CnEAKYFxAShYDwAAAGZhc3RfYmF0Y2hfc2l6ZXECSwpYBwAAAGZhc3RfbHJxA0c/uZmZmZmZmlgPAAAAbWV0YV9iYXRjaF9zaXplcQRLKFgOAAAAbWV0YV9zdGVwX3NpemVxBUc/yZmZmZmZmlgEAAAAc2VlZHEGSwFYCAAAAHRhc2tfdmFycQdLAVgMAAAAX2hpZGRlbl9rZXlzcQhdcQlYCAAAAGV4cF9uYW1lcQpYIAAAAG1hbWwyX2ZiczEwX21iczQwX2Zscl8wLjFfbWxyMC4ycQt1aAFiLg==",
+  "variant_log_file": "variant.json"
+}

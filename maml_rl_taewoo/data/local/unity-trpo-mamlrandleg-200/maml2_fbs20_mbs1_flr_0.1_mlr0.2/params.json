@@ -1,0 +1,29 @@
+{
+  "args_data": "gANjcmxsYWIubWlzYy5pbnN0cnVtZW50ClN0dWJNZXRob2RDYWxsCnEAKYFxAX1xAihYBgAAAF9fYXJnc3EDKGNybGxhYi5taXNjLmluc3RydW1lbnQKU3R1Yk9iamVjdApxBCmBcQV9cQYoWAQAAABhcmdzcQcpWAYAAABrd2FyZ3NxCH1xCShYAwAAAGVudnEKaAQpgXELfXEMKGgHKWgIfXENWAsAAAB3cmFwcGVkX2VudnEOaAQpgXEPfXEQKGgHKWgIfXERaApjcmxsYWIuZW52cy51bml0eV9lbnYKVW5pdHlHeW1FbnYKcRIpgXETfXEUKGgDKFiPAAAARDovZ3Jld19zdm4vMjAyMC9HaXRCbGl0L2dyZXdSTC9tYXJhdGhvbi1lbnZzLTAuNS4wYSArIG1sLWFnZW50cy0wLjUtMy4wYSArIFRlbnNvckZsb3dTaGFycC9Vbml0eVNESy9CdWlsZC90ZXN0X21hbWxfMTExMy9Vbml0eSBFbnZpcm9ubWVudC5leGVxFYhOToh0cRZYCAAAAF9fa3dhcmdzcRd9cRh1YnNYCwAAAHByb3h5X2NsYXNzcRljcmxsYWIuZW52cy5ub3JtYWxpemVkX2VudgpOb3JtYWxpemVkRW52CnEadWJzaBljc2FuZGJveC5yb2NreS50Zi5lbnZzLmJhc2UKVGZFbnYKcRt1YlgGAAAAcG9saWN5cRxoBCmBcR19cR4oaAcpaAh9cR8oWAQAAABuYW1lcSBoHFgIAAAAZW52X3NwZWNxIWNybGxhYi5taXNjLmluc3RydW1lbnQKU3R1YkF0dHIKcSIpgXEjfXEkKFgEAAAAX29ianElaAtYCgAAAF9hdHRyX25hbWVxJlgEAAAAc3BlY3EndWJYDgAAAGdyYWRfc3RlcF9zaXplcShHP7mZmZmZmZpYEwAAAGhpZGRlbl9ub25saW5lYXJpdHlxKWN0ZW5zb3JmbG93LnB5dGhvbi5vcHMuZ2VuX25uX29wcwpyZWx1CnEqWAwAAABoaWRkZW5fc2l6ZXNxK0tkS2SGcSx1aBljc2FuZGJveC5yb2NreS50Zi5wb2xpY2llcy5tYW1sX21pbmltYWxfZ2F1c3NfbWxwX3BvbGljeQpNQU1MR2F1c3NpYW5NTFBQb2xpY3kKcS11YlgIAAAAYmFzZWxpbmVxLmgEKYFxL31xMChoByloCH1xMWghaCIpgXEyfXEzKGglaAtoJmgndWJzaBljcmxsYWIuYmFzZWxpbmVzLmxpbmVhcl9mZWF0dXJlX2Jhc2VsaW5lCkxpbmVhckZlYXR1cmVCYXNlbGluZQpxNHViWAsAAABsb2FkX3BvbGljeXE1TlgKAAAAYmF0Y2hfc2l6ZXE2SxRYDwAAAG1heF9wYXRoX2xlbmd0aHE3S8hYDwAAAG1ldGFfYmF0Y2hfc2l6ZXE4SwFYEAAAAG51bV9ncmFkX3VwZGF0ZXNxOUsDWAUAAABuX2l0cnE6TbgLWAgAAAB1c2VfbWFtbHE7iFgJAAAAc3RlcF9zaXplcTxHP8mZmZmZmZpYCQAAAG9wdGltaXplcnE9aAQpgXE+fXE/KGgHKWgIfXFAaCBoPXNoGWNzYW5kYm94LnJvY2t5LnRmLm9wdGltaXplcnMucGVuYWx0eV9sYmZnc19vcHRpbWl6ZXIKUGVuYWx0eUxiZmdzT3B0aW1pemVyCnFBdWJYBAAAAHBsb3RxQol1aBljc2FuZGJveC5yb2NreS50Zi5hbGdvcy5tYW1sX3RycG8KTUFNTFRSUE8KcUN1YlgFAAAAdHJhaW5xRCl9cUV0cUZoF31xR3ViLg==",
+  "exp_name": "maml2_fbs20_mbs1_flr_0.1_mlr0.2",
+  "json_args": {
+    "algo": {
+      "_name": "sandbox.rocky.tf.algos.maml_trpo.MAMLTRPO",
+      "batch_size": 20,
+      "load_policy": null,
+      "max_path_length": 200,
+      "meta_batch_size": 1,
+      "n_itr": 3000,
+      "num_grad_updates": 3,
+      "optimizer": {
+        "_name": "sandbox.rocky.tf.optimizers.penalty_lbfgs_optimizer.PenaltyLbfgsOptimizer",
+        "name": "optimizer"
+      },
+      "plot": false,
+      "step_size": 0.2,
+      "use_maml": true
+    },
+    "baseline": {
+      "_name": "rllab.baselines.linear_feature_baseline.LinearFeatureBaseline",
+      "env_spec": {
+        "attr": "spec",
+        "obj": {
+          "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+          "wrapped_env": {
+            "_name": "rllab.envs.normalized_env.NormalizedEnv",
+            "env": 

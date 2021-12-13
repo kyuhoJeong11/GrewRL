@@ -1,0 +1,88 @@
+{
+  "args_data": "gANjcmxsYWIubWlzYy5pbnN0cnVtZW50ClN0dWJNZXRob2RDYWxsCnEAKYFxAX1xAihYBgAAAF9fYXJnc3EDKGNybGxhYi5taXNjLmluc3RydW1lbnQKU3R1Yk9iamVjdApxBCmBcQV9cQYoWAQAAABhcmdzcQcpWAYAAABrd2FyZ3NxCH1xCShYAwAAAGVudnEKaAQpgXELfXEMKGgHKWgIfXENWAsAAAB3cmFwcGVkX2VudnEOaAQpgXEPfXEQKGgHKWgIfXERaApoBCmBcRJ9cRMoaAcpaAh9cRRYCAAAAGVudl9uYW1lcRVYjwAAAEQ6L2dyZXdfc3ZuLzIwMjAvR2l0QmxpdC9ncmV3UkwvbWFyYXRob24tZW52cy0wLjUuMGEgKyBtbC1hZ2VudHMtMC41LTMuMGEgKyBUZW5zb3JGbG93U2hhcnAvVW5pdHlTREsvQnVpbGQvdGVzdF9tYW1sXzExMTMvVW5pdHkgRW52aXJvbm1lbnQuZXhlcRZzWAsAAABwcm94eV9jbGFzc3EXY3JsbGFiLmVudnMudW5pdHlfZW52ClVuaXR5R3ltRW52CnEYdWJzaBdjcmxsYWIuZW52cy5ub3JtYWxpemVkX2VudgpOb3JtYWxpemVkRW52CnEZdWJzaBdjc2FuZGJveC5yb2NreS50Zi5lbnZzLmJhc2UKVGZFbnYKcRp1YlgGAAAAcG9saWN5cRtoBCmBcRx9cR0oaAcpaAh9cR4oWAQAAABuYW1lcR9oG1gIAAAAZW52X3NwZWNxIGNybGxhYi5taXNjLmluc3RydW1lbnQKU3R1YkF0dHIKcSEpgXEifXEjKFgEAAAAX29ianEkaAtYCgAAAF9hdHRyX25hbWVxJVgEAAAAc3BlY3EmdWJYDAAAAGhpZGRlbl9zaXplc3EnSyBLIIZxKHVoF2NzYW5kYm94LnJvY2t5LnRmLnBvbGljaWVzLmdhdXNzaWFuX21scF9wb2xpY3kKR2F1c3NpYW5NTFBQb2xpY3kKcSl1YlgIAAAAYmFzZWxpbmVxKmgEKYFxK31xLChoByloCH1xLWggaCEpgXEufXEvKGgkaAtoJWgmdWJzaBdjcmxsYWIuYmFzZWxpbmVzLmxpbmVhcl9mZWF0dXJlX2Jhc2VsaW5lCkxpbmVhckZlYXR1cmVCYXNlbGluZQpxMHViWAoAAABiYXRjaF9zaXplcTFNoA9YDwAAAG1heF9wYXRoX2xlbmd0aHEyaCEpgXEzfXE0KGgkaAtoJVgHAAAAaG9yaXpvbnE1dWJYBQAAAG5faXRycTZN6ANYCAAAAGRpc2NvdW50cTdHP++uFHrhR65YCQAAAHN0ZXBfc2l6ZXE4Rz+EeuFHrhR7WBMAAABmb3JjZV9iYXRjaF9zYW1wbGVycTmIdWgXY3NhbmRib3gucm9ja3kudGYuYWxnb3MudHJwbwpUUlBPCnE6dWJYBQAAAHRyYWlucTspfXE8dHE9WAgAAABfX2t3YXJnc3E+fXE/dWIu",
+  "exp_name": "experiment_2020_11_18_10_30_08_691838_\u00b4\u00eb\u00c7\u00d1\u00b9\u00ce\u00b1\u00b9 \u00c7\u00a5\u00c1\u00d8\u00bd\u00c3_99cef",
+  "json_args": {
+    "algo": {
+      "_name": "sandbox.rocky.tf.algos.trpo.TRPO",
+      "batch_size": 4000,
+      "discount": 0.99,
+      "force_batch_sampler": true,
+      "max_path_length": {
+        "attr": "horizon",
+        "obj": {
+          "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+          "wrapped_env": {
+            "_name": "rllab.envs.normalized_env.NormalizedEnv",
+            "env": {
+              "_name": "rllab.envs.unity_env.UnityGymEnv",
+              "env_name": "D:/grew_svn/2020/GitBlit/grewRL/marathon-envs-0.5.0a + ml-agents-0.5-3.0a + TensorFlowSharp/UnitySDK/Build/test_maml_1113/Unity Environment.exe"
+            }
+          }
+        }
+      },
+      "n_itr": 1000,
+      "step_size": 0.01
+    },
+    "baseline": {
+      "_name": "rllab.baselines.linear_feature_baseline.LinearFeatureBaseline",
+      "env_spec": {
+        "attr": "spec",
+        "obj": {
+          "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+          "wrapped_env": {
+            "_name": "rllab.envs.normalized_env.NormalizedEnv",
+            "env": {
+              "_name": "rllab.envs.unity_env.UnityGymEnv",
+              "env_name": "D:/grew_svn/2020/GitBlit/grewRL/marathon-envs-0.5.0a + ml-agents-0.5-3.0a + TensorFlowSharp/UnitySDK/Build/test_maml_1113/Unity Environment.exe"
+            }
+          }
+        }
+      }
+    },
+    "env": {
+      "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+      "wrapped_env": {
+        "_name": "rllab.envs.normalized_env.NormalizedEnv",
+        "env": {
+          "_name": "rllab.envs.unity_env.UnityGymEnv",
+          "env_name": "D:/grew_svn/2020/GitBlit/grewRL/marathon-envs-0.5.0a + ml-agents-0.5-3.0a + TensorFlowSharp/UnitySDK/Build/test_maml_1113/Unity Environment.exe"
+        }
+      }
+    },
+    "policy": {
+      "_name": "sandbox.rocky.tf.policies.gaussian_mlp_policy.GaussianMLPPolicy",
+      "env_spec": {
+        "attr": "spec",
+        "obj": {
+          "_name": "sandbox.rocky.tf.envs.base.TfEnv",
+          "wrapped_env": {
+            "_name": "rllab.envs.normalized_env.NormalizedEnv",
+            "env": {
+              "_name": "rllab.envs.unity_env.UnityGymEnv",
+              "env_name": "D:/grew_svn/2020/GitBlit/grewRL/marathon-envs-0.5.0a + ml-agents-0.5-3.0a + TensorFlowSharp/UnitySDK/Build/test_maml_1113/Unity Environment.exe"
+            }
+          }
+        }
+      },
+      "hidden_sizes": [
+        32,
+        32
+      ],
+      "name": "policy"
+    }
+  },
+  "log_dir": null,
+  "log_tabular_only": false,
+  "n_parallel": 1,
+  "params_log_file": "params.json",
+  "plot": false,
+  "resume_from": null,
+  "seed": 1,
+  "snapshot_gap": 1,
+  "snapshot_mode": "last",
+  "tabular_log_file": "progress.csv",
+  "text_log_file": "debug.log",
+  "use_cloudpickle": false,
+  "variant_data": null,
+  "variant_log_file": "variant.json"
+}
